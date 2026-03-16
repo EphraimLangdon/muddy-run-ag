@@ -115,3 +115,28 @@ If you see this, it usually means you tried to run the folder path itself.
 In this guide, codes are often surrounded by \`backticks\` to look like code.
 - **Do NOT** type or paste the \` symbol into your terminal.
 - **Only** copy the text *inside* the gray boxes.
+#### 3. "Authentication Failed" (Password deprecated)
+GitHub no longer accepts your normal password in the terminal. You must use a **Personal Access Token (PAT)**.
+
+**How to generate a Token:**
+1. Go to GitHub **Settings** (click your profile photo).
+2. Scroll to the bottom and click **Developer settings**.
+3. Click **Personal access tokens** > **Tokens (classic)**.
+4. Click **Generate new token (classic)**.
+5. Give it a name (e.g., "My Website") and check the **repo** box.
+6. Click **Generate token** and **COPY IT IMMEDIATELY** (you won't see it again).
+
+**How to use it:**
+When the terminal asks for your "Password", paste this long token instead.
+#### 4. "RPC failed; HTTP 400" Error
+This happens when Git struggles to send your files to GitHub (even small ones).
+
+**The Fix:**
+Run these two commands in your terminal to clear the networking hurdle:
+
+```bash
+git config --global http.postBuffer 524288000
+git config --global http.version HTTP/1.1
+```
+
+After running those, try the `git push` command again!

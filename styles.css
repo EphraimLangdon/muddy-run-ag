@@ -37,7 +37,7 @@ h1, h2, h3 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px; /* Increased from 20px for more breathing room */
 }
 
 .section-padding {
@@ -403,10 +403,11 @@ header {
     .header-layout {
         display: flex;
         justify-content: space-between;
-        padding: 0 25px;
+        padding: 0 30px; /* Increased padding for logo and burger */
     }
     .header-nav-left { display: none; }
     .hero h1 { font-size: 3.5rem; }
+    .hero p { font-size: 1.15rem; } /* Added p font size adjustment */
     .footer-grid { grid-template-columns: 1fr; gap: 40px; }
     
     .menu-toggle {
@@ -754,18 +755,144 @@ header {
 }
 
 @media (max-width: 768px) {
-    .footer {
-        padding: 80px 0 30px;
+    .container {
+        padding: 0 25px;
     }
-    .footer-grid {
-        grid-template-columns: 1fr;
+
+    .section-padding {
+        padding: 70px 0 !important;
     }
-    .footer-bottom-flex {
-        flex-direction: column;
-        gap: 20px;
+
+    .hero {
+        height: auto;
+        padding: 120px 0 80px;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem !important;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.1rem !important;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .section-title {
+        font-size: 2.2rem !important;
         text-align: center;
     }
-    .footer-legal a {
+
+    .story-text {
+        text-align: center;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .impact-number {
+        font-size: 3.5rem !important;
+    }
+
+    .impact-item {
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .impact-item:last-child {
+        border-bottom: none;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .contact-split-container {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+
+    .contact-visual {
+        min-height: 350px !important;
+        width: 100% !important;
+    }
+
+    .visual-overlay {
+        padding: 40px 20px !important;
+        background: linear-gradient(to bottom, rgba(45, 62, 46, 0.9), rgba(45, 62, 46, 0.4)) !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .visual-content h2 {
+        font-size: 2.5rem !important;
+    }
+
+    .contact-panel {
+        padding: 40px 15px !important;
+        width: 100% !important;
+    }
+
+    .contact-panel .section-title {
+        font-size: 2.2rem !important;
+        text-align: center !important;
+    }
+
+    .contact-panel .section-title::after {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .contact-method-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-cta {
+        padding: 25px 20px !important;
         margin: 0 10px;
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 60px 0 30px !important;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 40px !important;
+    }
+
+    .footer-branding p {
+        margin: 0 auto 25px !important;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-contact-info p {
+        justify-content: center;
+    }
+
+    .footer-bottom-flex {
+        flex-direction: column !important;
+        gap: 20px !important;
+        text-align: center !important;
+    }
+
+    .footer-legal a {
+        margin: 0 10px !important;
     }
 }
